@@ -22,6 +22,7 @@
 		<module>ExceptionHandling</module>
 		<module>Caching</module>
 		<module>DesignPatterns</module>
+		<module>CustomAnnotations</module>
 	</modules>
 	<properties>
 		<java.version>17</java.version>
