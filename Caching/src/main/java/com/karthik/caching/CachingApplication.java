@@ -1,4 +1,4 @@
-package com.kartheek.caching.simple;
+package com.karthik.caching;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
