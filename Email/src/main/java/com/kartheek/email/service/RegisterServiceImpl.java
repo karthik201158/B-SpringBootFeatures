@@ -1,23 +1,23 @@
-package com.kartheek.email;
+package com.kartheek.email.service;
 
+import com.kartheek.email.EmailSenderService;
+import com.kartheek.email.model.RegisterReq;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Service;
 
-import java.util.UUID;
-
 @Service
-public class RegisterServiceImpl {
+public class RegisterServiceImpl implements RegisterService {
 
     @Autowired
     private EmailSenderService emailSenderService;
 
-
-    public ResponseEntity<String> sendEmail(String userEmail) {
+   @Override
+    public ResponseEntity<String> sendEmail(RegisterReq user) {
         SimpleMailMessage mailMessage = new SimpleMailMessage();
-        mailMessage.setTo(userEmail);
+        mailMessage.setTo(user.getEmail());
         mailMessage.setSubject("Complete Registration!");
         mailMessage.setText("To confirm your account, please click here : "
                 +"http://localhost:8081/api/register/confirm-account?token=");

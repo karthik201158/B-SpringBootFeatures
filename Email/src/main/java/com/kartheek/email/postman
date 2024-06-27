@@ -1,0 +1,6 @@
+
+
+http://localhost:8081/api/sendemail
+{
+  "email": "karthikmobile1120@gmail.com"
+}
